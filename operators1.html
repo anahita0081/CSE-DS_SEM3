@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">Click Me</button>
+    <p id="output">Hello</p>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <p id="greet"></p>
+
+    <ul id="taskList">
+        <li>Sample task 1</li>
+        <li>Sample task 2</li>
+    </ul>
+
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addBtn">Add</button>
+
+    
+
+    <script>
+
+        document.getElementById("btn").addEventListener("click", () => {
+            document.getElementById("output").textContent = "Button was clicked!";
+        });
+
+        const input = document.getElementById("nameInput");
+        const greet = document.getElementById("greet");
+
+        input.addEventListener("input", () => {
+            greet.textContent = `Hello, ${input.value}!`;
+        });
+
+        document.getElementById("taskList").addEventListener("click", (e) => {
+            if (e.target.tagName === "LI") {
+                e.target.remove();
+            }
+        });
+
+
+        document.getElementById("addBtn").addEventListener("click", () => {
+            const input = document.getElementById("taskInput");
+            if (input.value.trim() === "") return;
+            const li = document.createElement("li");
+            li.textContent = input.value;
+            document.getElementById("taskList").appendChild(li);
+            input.value = "";
+        });
+
+    </script>
+
+</body>
+</html>
