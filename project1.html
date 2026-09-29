@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABS Limited Company</title>
+
+    <link rel="stylesheet" href="project1.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo-name">
+            <h2>ABS Limited Company</h2>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Subject</a>
+            <a href="#">Payment</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="heading">
+            <h1>Book Store</h1>
+            <p>Select your favourite books and add them to cart.</p>
+        </div>
+        <div class="content">
+
+            <div class="table-section">
+                <table>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Subject</th>
+                        <th>Price</th>
+                        <th>No. of Books</th>
+                        <th>Add to Cart</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Mathematics</td>
+                        <td>₹450</td>
+                        <td>
+                            <span id="math-count">0</span>
+                        </td>
+                        <td>
+                            <button onclick="addToCart('math', 450)">
+                                Add to Cart
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Physics</td>
+                        <td>₹400</td>
+                        <td>
+                            <span id="physics-count">0</span>
+                        </td>
+                        <td>
+                            <button onclick="addToCart('physics', 400)">
+                                Add to Cart
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>C Programming</td>
+                        <td>₹350</td>
+                        <td>
+                            <span id="c-count">0</span>
+                        </td>
+                        <td>
+                            <button onclick="addToCart('c', 350)">
+                                Add to Cart
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Data Structures</td>
+                        <td>₹550</td>
+                        <td>
+                            <span id="dsa-count">0</span>
+                        </td>
+                        <td>
+                            <button onclick="addToCart('dsa', 550)">
+                                Add to Cart
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Web Development</td>
+                        <td>₹500</td>
+                        <td>
+                            <span id="web-count">0</span>
+                        </td>
+                        <td>
+                            <button onclick="addToCart('web', 500)">
+                                Add to Cart
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="cart-summary">
+                <h2>Cart Summary</h2>
+                <p>Total Books</p>
+                <h1 id="total-books">0</h1>
+                <p>Total Amount</p>
+                <h2>₹<span id="total-price">0</span></h2>
+                <button class="payment-btn">
+                    Proceed to Payment
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="ABS Logo">
+                <h2>ABS Limited Company</h2>
+                <p>Your trusted book store.</p>
+            </div>
+            <div class="footer-info">
+                <h3>Contact Us</h3>
+                <p>📧 abscompany@gmail.com</p>
+                <p>📞 +91 98765 43210</p>
+                <p>📍 Ghaziabad, Uttar Pradesh, India</p>
+            </div>
+            <div class="map">
+                <h3>Our Location</h3>
+                <iframe
+                    src="https://www.google.com/maps?q=Ghaziabad%2C%20Uttar%20Pradesh&output=embed"
+                    width="300"
+                    height="180"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 ABS Limited Company | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
